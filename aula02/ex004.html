@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = prompt("Qual é seu nome?")
+        document.write(`Olá,<strong> ${nome}</strong>! Seu nome tem ${nome.length} letras. </br>` )
+        document.write(`Seu nome em maiúsculo é ${nome.toUpperCase()}<br>`)
+        document.write(`Seu nome em minúsculo é ${nome.toLowerCase()}`)
+
+        // document.write - Escreve no documento. Pode usar tags dentro dele também mas não é recomendado
+
+        /* Formatando números:
+        var n1 = 1543.5 
+         n1.toFixed(2) (muda a casa terminal)
+        '1545.50'
+         n1.toFixed(2).replace('', '') muda ponto para vírgula
+        '1545.50'
+        n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }) para colocar em reais   
+        'R$ 1.545,50'
+        */
+    </script>
+
+</body>
+</html>
