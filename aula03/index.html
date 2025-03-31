@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <style>
+        body {
+            font: 12pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <!-- LEMBRAR DE PASSAR PARA O CADERNO POIS FICOU MUITO EXTENSO OS COMENTÁRIOS
+
+
+    atenção a precedencia na hora de fazer a ordem dos cálculos, sendo essa ordem:
+     () parenteses
+     ** potencia
+     * / % (se estiverem juntos, fazer quem aparece primeiro)
+     + -
+
+     operadores de auto-atribuições:
+     ex: var n = 3
+     n = n + 4
+     n = 3 + 4
+     n = 7
+     logo, o n que antes valia 3, agora vale 7
+     se continuar vai seguindo essa mudança
+     n = n - 5
+     n = 7 - 5
+     n = 2
+     n que antes valia 7 agora vale 2
+
+     simplificando:
+     ex: n = n + 4
+     para simplificar fica:
+     n+=4
+     OBS: O += SÓ SERVE SE A MESMA VARIÁVEL RECEBER ELA + 4. SE FOR POR EX N = X + 4, NAO DA PRA SIMPLIFICAR
+
+     Usar += (ou -=, *=, /=...) só quando a variável receber ela mesma + um valor. Se a variável receber outra variável + valor, não dá pra simplificar.
+
+     Operadores de Incremento (++) e Decremento (--)
+     São atalhos para adicionar ou subtrair 1 de uma variável.
+     Forma normal:
+     n = n + 1;  // Incrementa 1 (longo)
+     n = n - 1;  // Decrementa 1 (longo)
+     Forma simplificada:
+     n++;  // Incrementa 1 (n = n + 1)
+     n--;  // Decrementa 1 (n = n - 1)
+
+    -->
+    <h1>Operadores</h1>
+    Aritméticos: +(adição); -(subtração); *(multiplicação); /(divisão); %(operador de resto da divisão sendo ela inteira); **(exponenciação)
+
+    <br><br>
+
+    Atribuição: Atribuição simples (=): Atribui o valor a direita e a variável a esquerda. <br>
+    Atribuição com adição (+=): Adiciona o valor a direita ao valor atual da variável e atribui o resultado. <br>
+    Atribuição com subtração (-=): Subtrai o valor a direita do valor atual da variável e atribui o resultado. <br>
+    Atribuição com multiplicação (*=): Multiplica o valor atual da variável pelo valor a direita e atribui o resultado. <br>
+    Atribuição com divisão (/=): Divide o valor atual da variável pelo valor a direita e atribui o resultado. <br>
+    Atribuição com resto (%=): Calcula o resto da divisão do valor atual da variável pelo valor a direita e atribui o resultado. <br>
+    Atribuição com exponenciação (**=): Eleva o valor atual da variável a potência do valor à direita e atribui o resultado.
+
+    <br><br>
+
+    Relacionais: Os operadores relacionais comparam valores e retornam true ou false. <br>
+    == (Igual a): Verifica se os valores são iguais.  Ex: 5 == "5" → true <br>
+    === (Estritamente igual a): Verifica valor e tipo. Ex: 5 === "5" → false <br>
+    != (Diferente de): Verifica se os valores são diferentes. Ex: 5 != "6" → true <br>
+    !== (Estritamente diferente de): Verifica valor ou tipo. Ex: 5 !== "5" → true <br>
+    > (Maior que): Verifica se o valor da esquerda é maior. Ex: 10 > 5 → true <br>
+    < (Menor que): Verifica se o valor da esquerda é menor. Ex: 3 < 2 → false <br>
+    >= (Maior ou igual a): Verifica se é maior ou igual. Ex: 5 >= 5 → true <br>
+    <= (Menor ou igual a): Verifica se é menor ou igual. Ex: 4 <= 3 → false <br>
+    == e != ignoram o tipo (só comparam valores). <br>
+    === e !== exigem tipo e valor iguais. <br>
+    >, <, >=, <= comparam números/strings.
+
+    <br><br>
+
+    Lógicos: Os operadores lógicos combinam expressões e retornam true ou false. <br>
+    && (conjunção: AND → E): true somente se TODAS as condições forem verdadeiras. Ex: (5 > 3) && (2 < 4) → true (porque as duas são verdade). <br>
+    || (disjunção: OR → OU): true se PELO MENOS UMA condição for verdadeira. Ex: (10 == 5) || (3 !== "3") → true (a segunda é verdade). <br>
+    ! (negação: NOT → NÃO): Inverte o valor: true vira false e vice-versa. Ex: !(10 > 5) → false (porque 10 > 5 é true, e o ! nega). <br>
+    && = "E" → Só passa se todas forem verdade. <br>
+    || = "OU" → Passa se pelo menos uma for verdade. <br>
+    ! = "NÃO" → Inverte o resultado (útil para checar o oposto). <br><br>
+    Ordem de precedencia quando tem operadores aritmeticos, relacionais e logicos em uma mesma expressão: <br>
+    Primeiro faz os operadores aritmeticos, depois os relacionais, depois os lógicos. <br>
+    Ex: var a = 5 <br>
+    var b = 8 <br>
+    a > b && b % 2 == 0 <br>
+    false <br><br>
+    Outra ordem importante é: caso tenha em uma mesma expressão o &&(E), ||(OU) e !(NÃO), se faz primeiro !, depois && e depois o ||
+    <br><br>
+
+    Ternário: É a interrogação e os dois pontos dentro de uma mesma expressão. É ternario pois tem três partes. Ex: teste(bloco1) ? true(bloco2) : false(bloco3) <br>
+    ?(interrogação): "Se" (testa a condição). <br>
+    : (dois pontos): "Senão" (o que retornar se for falso). <br>
+    Em ordem de precedencia o ternário é sempre o último a ser feito.
+
+</body>
+</html>
