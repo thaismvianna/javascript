@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: rgb(205, 205, 253);
+            color: black;
+            font: normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Document Object Model (DOM):
+    É a representação do HTML no JavaScript, transformando a página em uma árvore de objetos que você pode manipular.
+    É a "ponte" entre o JavaScript e o HTML/CSS. Permite ler, modificar, adicionar e remover elementos da página. 
+    DOM = "HTML que o JavaScript entende". 
+    Usado para tornar páginas dinâmicas (ex: atualizar conteúdo sem recarregar).
+    -->
+    <h1>Iniciando estudos DOM - Árvore DOM</h1>
+    <p>
+        <pre>
+            ┌─────────────────────┐
+            │       window        │  ← Raiz do DOM
+            └─────────┬──────────┘
+                      │
+               ┌──────┴──────┐
+            location      document     history
+                             │
+                           html
+                         ┌───┴───┐
+                       head     body
+                     ┌─┬─┴─┐  ┌─┬─┬─┐
+                   meta title...h1 p div...
+            </pre>
+    </p>
+    <p>Selecionando elementos: por Marca, por ID, por Nome, por Classe, por Seletor.</p>
+    <p>Marca: getElementsByTagName()</p>
+    <p>ID: getElementById()</p>
+    <p>Nome: getElementsByName()</p>
+    <p>Classe: getElementsByClassName()</p>
+    <p>Seletor: querySelector() e querySelectorAll()</p>
+    <p>Aqui vai a resolução</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim.</div>
+
+    <script>
+        var corpo = window.document.body
+        var h1 = window.document.getElementsByTagName("h1")[0]
+        var div = window.document.getElementById("msg")
+
+        document.write(h1.innerHTML)
+        div.style.background = "gray"
+        div.innerText = "Estou aguardando..."
+    </script> 
+</body>
+</html>

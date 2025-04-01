@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos no DOM</title>
+    <!--
+    São ações que acontecem na página (cliques, teclas pressionadas, movimentos do mouse, etc.). No JavaScript, você pode "escutar" esses eventos e executar funções quando eles ocorrerem.
+
+    Principais tipos de eventos:
+    Eventos de Mouse:
+    click → Clique do mouse
+    mouseover → Mouse passa por cima
+    mouseout → Mouse sai de cima
+
+    Eventos de Teclado:
+    keydown → Tecla pressionada
+    keyup → Tecla liberada
+
+    Eventos de Formulário:
+    submit → Formulário enviado
+    change → Valor alterado (input, select)
+    focus → Campo selecionado
+
+    Eventos de Janela:
+    load → Página carregada
+    resize → Janela redimensionada
+    scroll → Rolagem da página
+
+    Funções:
+    function ação() {
+     
+    }
+
+    -->
+    <style>
+        div#area {
+            background: rgb(42, 139, 42);
+            font: normal 20pt arial;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"> <!-- onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+    Da para ao inves de usar aqui e deixar mais poluído, usar no script js -->
+        Interaja...
+    </div>
+
+    <script>
+        var area = document.getElementById("area") 
+        //quando coloca do lado de fora, serve para todas as function mas não é o ideal
+        
+        area.addEventListener("click" , clicar)
+        area.addEventListener("mouseenter" , entrar)
+        area.addEventListener("mouseout" , sair)
+
+        function clicar() {
+            area.innerText = "Clicou!"
+            area.style.background = "red"
+        }
+        function entrar() {
+            area.innerText = "Entrou!"
+        }
+        function sair() {
+            area.innerText = "Saiu!"
+            area.style.background = "blue"
+        }
+    </script>
+</body>
+</html>
