@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <!--
+    Funções são blocos de código que executam uma tarefa específica e podem ser reutilizados quantas vezes você quiser.
+
+    Declaração Básica:
+    function nomeDaFuncao() {
+        *Código a ser executado
+      }
+
+    Ex:
+    function cumprimentar() {
+        console.log("Olá, Treinador!");
+      }
+      cumprimentar(); *Chama a função → "Olá, Treinador!"
+
+    Funções com Parâmetros: Você pode passar informações para a função.
+    function somar(a, b) {
+        return a + b;
+      }
+      console.log(somar(2, 3)); // Resultado: 5
+
+    Retorno de Valores: Uma função pode retornar um resultado usando return.
+    function criarPokemon(nome, tipo) {
+        return { nome: nome, tipo: tipo };
+      }
+      let pikachu = criarPokemon("Pikachu", "Elétrico");
+      console.log(pikachu); // { nome: "Pikachu", tipo: "Elétrico" }
+
+    Arrow Functions (Funções de Seta): Sintaxe mais curta, comum em JavaScript moderno.
+    const atacar = (pokemon) => {
+        return `${pokemon} usou Investida!`;
+      };
+      console.log(atacar("Pikachu")); // "Pikachu usou Investida!"
+
+    Se for simples:
+    const dobrar = (x) => x * 2;
+    console.log(dobrar(5)); // 10
+
+    Funções Anônimas: Funções sem nome, usadas em callbacks ou variáveis.
+    const evoluiu = function() {
+        console.log("Seu Pokémon evoluiu!");
+      };
+      evoluiu(); // "Seu Pokémon evoluiu!"
+
+    Quando usar?
+    Repetir código: Se uma ação é usada várias vezes, crie uma função.
+    Organização: Divida tarefas complexas em funções menores.
+    Reutilização: Funções podem ser chamadas em diferentes partes do programa.
+    -->
+
+    <script src="script.js"></script>
+</body>
+</html>
