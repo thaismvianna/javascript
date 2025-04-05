@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <!--
+    Objetos são estruturas que armazenam propriedades (dados) e métodos (ações) relacionados a uma entidade.
+
+    Criando um Objeto:
+let pokemon = {
+    nome: "Pikachu",
+    tipo: "Elétrico",
+    nivel: 25,
+    atacar: function() {
+        return `${this.nome} usou Choque do Trovão!`;
+    }
+};
+Propriedades: nome, tipo, nivel (características).
+Método: atacar() (ação/função dentro do objeto).
+
+Acessando Valores
+Notação de ponto:
+console.log(pokemon.nome); // "Pikachu"
+console.log(pokemon.atacar()); // "Pikachu usou Choque do Trovão!"
+
+Notação de colchetes (útil para propriedades dinâmicas):
+console.log(pokemon["tipo"]); // "Elétrico"
+
+Adicionando/Alterando Propriedades:
+pokemon.regiao = "Kanto"; // Adiciona nova propriedade
+pokemon.nivel = 26; // Altera valor existente
+
+Palavra-Chave this
+Refere-se ao próprio objeto dentro de métodos:
+let pokemon = {
+    nome: "Charizard",
+    saudacao: function() {
+        return `Olá, eu sou ${this.nome}!`;
+    }
+};
+console.log(pokemon.saudacao()); // "Olá, eu sou Charizard!"
+
+Objetos Aninhados
+Objetos podem conter outros objetos:
+let treinador = {
+    nome: "Ash",
+    pokemons: [
+        { nome: "Pikachu", tipo: "Elétrico" },
+        { nome: "Bulbasaur", tipo: "Planta" }
+    ]
+};
+console.log(treinador.pokemons[0].nome); // "Pikachu"
+
+Quando usar? Para representar entidades do mundo real (ex.: usuários, produtos).
+Para organizar dados e funções relacionadas em um único lugar.
+    
+    
+    -->
+
+    <script src="script.js"></script>
+</body>
+</html>
